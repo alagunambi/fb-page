@@ -1,0 +1,15 @@
+<ul class="posts_list">
+  <% @posts.each do |post| %>
+    <li class="post">
+      <span class="message">
+        <%= post.message.to_s %>
+      </span>
+      <span class="link">
+        <%= link_to post.link.to_s, url_for(post.link.to_s), :target => '_blank' %>
+      </span>
+      <span class="chronology badge badge-info" title='<%= post.created_time.iso8601 %>'>
+        <%= post.created_time.strftime("%b, %d, %Y") %>
+      </span>
+    </li>
+  <% end %>
+</ul>

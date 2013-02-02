@@ -1,0 +1,9 @@
+--- 
+cursor_positions: 
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 226
+    :timestamp: 2013-02-03 01:40:14 +05:30
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 75
+    :timestamp: 2013-02-03 00:52:30 +05:30
+files_to_retain: 0

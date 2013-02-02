@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Facebook Page</title>
+    <%= stylesheet_link_tag :application %>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">
+          <%= @page.name %>
+          <span class="location">
+            <%= @page.location.city %>, <%= @page.location.country %>
+          </span>
+        </a>
+        <ul class="nav">
+          <li class=""><a href="#"><span class="badge badge-warning"><%= @page.like_count.to_s + " Likes" %></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag :application %>
+  </body>
+</html>
