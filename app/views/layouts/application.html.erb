@@ -15,11 +15,33 @@
         </a>
         <ul class="nav">
           <li class=""><a href="#"><span class="badge badge-warning"><%= @page.like_count.to_s + " Likes" %></span></a></li>
+          <li class=""><a href="#"><span class="badge badge-warning"><%= @page.posts.count.to_s + " Posts" %></span></a></li>
+          <li class=""><a href="#"><span class="badge badge-warning"><%= @page.feed.count.to_s + " Feeds" %></span></a></li>
         </ul>
       </div>
     </div>
     <div class="container-fluid">
-      <%= yield %>
+      <div class="row-fluid">
+        <div class="span9">
+          <%= yield %>
+        </div>
+        <div class="span3">
+          <div class="side_panel">
+            <span class="cover info">
+              <%= image_tag @page.cover.source %>              
+            </span>
+            <span class="first info expander">
+              <%= @page.mission %>
+            </span>
+            <span class="second info">
+              <%= content_tag :span, @page.category, :class => "btn btn-info" %>
+            </span>
+            <span class="third info">
+              <%= link_to url_for(@page.website.to_s), url_for(@page.website.to_s), :class => "btn btn-info" %>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
     <%= javascript_include_tag :application %>
   </body>

@@ -14,3 +14,24 @@ ul.posts_list {
     background: rgba(255, 255, 255, 0.27);
   }
 }
+
+.side_panel {
+  float: left;
+  .first.info, .info {
+    margin-bottom: 20px;
+    span, a {
+      float: left;
+    }
+  }
+  span {
+    float: left;
+  }
+}
+
+.read-more, .read-less {
+  width: 100%;
+}
+
+.cover.info {
+  margin-bottom: 10px;
+}

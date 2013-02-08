@@ -7,6 +7,12 @@
       <span class="link">
         <%= link_to post.link.to_s, url_for(post.link.to_s), :target => '_blank' %>
       </span>
+      <span class="likes badge badge-info">
+        <%= post.likes.count > 0 ? post.likes.count.to_s + " Likes" : "No Likes" %>
+      </span>
+      <span class="comments badge badge-info">
+        <%= post.comments.count > 0 ? post.comments.count.to_s + " Comments" : "No Comments"  %>
+      </span>
       <span class="chronology badge badge-info" title='<%= post.created_time.iso8601 %>'>
         <%= post.created_time.strftime("%b, %d, %Y") %>
       </span>

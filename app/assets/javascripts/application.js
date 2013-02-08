@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.expander.min.js
 //= require jquery.timeago.js
 //= require page.js
